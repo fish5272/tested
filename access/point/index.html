@@ -182,35 +182,7 @@
                             </svg></span></button></div>
                                         </div>
                                     </form>
-    <script type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-<script type="text/javascript">
-  emailjs.init('KuJPLZSBesKWR07cn')
-</script>
-
-                   <script>
-                       const btn = document.getElementById('button');
-
-document.getElementById('form')
- .addEventListener('submit', function(event) {
-   event.preventDefault();
-
-   btn.value = 'Sending...';
-
-   const serviceID = 'service_ma4lrqj';
-   const templateID = 'template_rc8enk5';
-
-   emailjs.sendForm(serviceID, templateID, this)
-    .then(() => {
-      btn.value = 'Send Email';
-      alert('Sent!');
-    }, (err) => {
-      btn.value = 'Send Email';
-      alert(JSON.stringify(err));
-    });
-});
-                   </script>                 
+                     
                                 </div>
                             </div>
                         </div>
@@ -745,6 +717,35 @@ document.getElementById('form')
         </div>
         <script src="../src/js/js1.js"></script>
         <script src="../src/js/js2w.js"></script>
+        <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('KuJPLZSBesKWR07cn')
+</script>
+
+                   <script>
+                       const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'service_ma4lrqj';
+   const templateID = 'template_rc8enk5';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
+                   </script> 
 </body>
 <script>
     function ready() {
